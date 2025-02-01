@@ -2,7 +2,6 @@ package study.about.springadvanced.advanced;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import study.about.springadvanced.advanced.trace.logtrace.FieldLogTrace;
 import study.about.springadvanced.advanced.trace.logtrace.LogTrace;
 import study.about.springadvanced.advanced.trace.logtrace.ThreadLocalLogTrace;
 
@@ -19,6 +18,9 @@ public class LogTraceConfig {
                 해당 인스턴스를 여러 쓰레드가 동시에 접근할 경우 "동시성 문제 발생!"
          */
 
+        /**
+         * LogTrace 인터페이스의 구현체로 ThreadLocalLogTrace 를 사용하겠다.
+         */
         return new ThreadLocalLogTrace();
     }
 
